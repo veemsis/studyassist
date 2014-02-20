@@ -1,17 +1,17 @@
 function Timer(minutes){
     for(var min = minutes;min>=0;min --){
-        $('#minutes').html(min);
-        Window.setTimeout(function() {return true;}, 1000);
+        $('#minutes').delay(1000).replaceWith('<div id="minutes">' + min + '</div>');
         
-        for (var sec = 59;sec >= 0;sec-- ){
-            $('#seconds').html(sec);
-            Window.setTimeout(function() {return true;}, 1000);
+        
+        for (var sec = 10;sec >= 0;sec-- ){
+            $('#seconds').delay(1000).fadeIn('slow').replaceWith('<div id="seconds">' + sec + '</div>');
+            $('#seconds').fadeOut('slow');  
         }
     }
 }
 
 $(document).ready(function () {
-    $('#minutes').delay(500).fadeIn('slow');
+    Timer(1);
 
 });
 

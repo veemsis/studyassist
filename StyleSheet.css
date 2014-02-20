@@ -1,2 +1,40 @@
 body {
 }
+#start{
+    background-color: green;
+    color:black;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+#pause{
+    background-color: yellow;
+    color:black;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+#minutes{
+    background-color: red;
+    color:black;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+    
+}
+#seconds{
+    background-color: red;
+    color:black;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+    
+}

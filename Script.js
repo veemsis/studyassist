@@ -10,9 +10,9 @@ function Timer(){
                     clearInterval(minuty);
                 }
                 else if(sec === 0){
+                    min = min-1;
                     console.log("Minute is gone " + min);
                     $('#minutes').html(min).fadeIn();
-                    min = min-1;
                     sec = 59;
                     }else{
                         console.log("second is gone " + sec);

@@ -1,31 +1,37 @@
 function Timer(){
     
+
     this.start = function (minutes) {
-        for (var min = minutes; min >= 0; min--) {
-            setTimeout(function () {
-                $('#minutes').html(min).fadeIn().fadeOut();
-            }, 2000);
-            console.log(min);
-
-
-            for (var sec = 10; sec >= 0; sec--) {
-
-                setTimeout(function () {
-                    $('#seconds').html(sec).fadeIn().fadeOut();
-                }, 2000);
-                console.log(sec);
-            }
-        }
-
-
-
-    };
+        var min = minutes;
+        var sec = 0;
+        
+           var minuty = setInterval(function () {
+                if(sec === 0 && min ===0){
+                    clearInterval(minuty);
+                }
+                else if(sec === 0){
+                    console.log("Minute is gone " + min);
+                    $('#minutes').html(min).fadeIn();
+                    min = min-1;
+                    sec = 59;
+                    }else{
+                        console.log("second is gone " + sec);
+                        $('#seconds').html(sec).fadeIn().fadeOut();
+                        sec = sec-1;
+                    }
+                
+            }, 1000);     
+             };
 }
+
+
+
+
 var Watch = new Timer();
 
 $(document).ready(function () {
     
-    Watch.start(2);
+    Watch.start(1);
 
 });
 

@@ -1,10 +1,10 @@
 function Timer(){
-
-    this.setMinutes = function (minutes) {
-        this.minutes = minutes;
+    this.minutes = 0;
+    this.setMinutes = function (m) {
+        this.minutes = m;
     };
 
-    this.start = function () {
+    this.start = function (minutes) {
         for (var min = minutes; min >= 0; min--) {
             setTimeout(function () {
                 $('#minutes').html(min).fadeIn().fadeOut();
@@ -29,7 +29,7 @@ var Watch = new Timer();
 
 $(document).ready(function () {
     Watch.setMinutes(20);
-    Watch.start();
+    Watch.start(2);
 
 });
 

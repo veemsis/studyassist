@@ -1,7 +1,7 @@
 body {
 }
 #start{
-    background-color: green;
+    background-color: blue;
     color:black;
     height: 100px;
     width: 100px;
@@ -15,7 +15,7 @@ body {
     display: inline-block;
 }
 #minutes{
-    background-color: red;
+    background-color:#b6ff00 ;
     color:black;
     height: 100px;
     width: 100px;

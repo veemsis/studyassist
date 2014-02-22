@@ -63,7 +63,7 @@ var Watch = new Timer();
 $(document).ready(function () {
     $('#start').click(function () {
 
-        Watch.start(2,5);
+        Watch.start(0,5);
     });
     $('#pause').click(function () {
         Watch.pause();

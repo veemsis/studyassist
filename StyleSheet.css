@@ -1,4 +1,11 @@
 
+#timer{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color:#fff;
+    height: max-content;
+    
+}
 #start{
     background-color: blue;
     color:black;
@@ -22,7 +29,7 @@
     margin: 10px;
     text-align: center;
     font-family: cursive;
-    font-size: 20px;
+    font-size: 40px;
     
 }
 #seconds{

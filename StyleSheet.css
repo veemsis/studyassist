@@ -2,8 +2,10 @@
 #timer{
     margin-left: 20%;
     margin-right: 20%;
-    background-color:#fff;
-    height: max-content;
+    background-color:#4FAA4F;
+    height: auto;
+    padding: 5%;
+    text-align: center; 
     
 }
 #start{
@@ -21,26 +23,25 @@
     display: inline-block;
 }
 #minutes{
-    background-color:#b6ff00;
-    color:black;
-    height: 100px;
+    height: 150px;
     width: 100px;
     display: inline-block;
     margin: 10px;
     text-align: center;
     font-family: cursive;
-    font-size: 40px;
+    font-size: 100px;
     
 }
 #seconds{
-    background-color: red;
-    color:black;
-    height: 100px;
+    height: 150px;
     width: 100px;
-    display: inline-block;
+    color: white;
+    background-color: black;
     margin: 10px;
     text-align: center;
     font-family: cursive;
-    font-size: 20px;
+    font-size: 100px;
+    display:  inline-block;
+    text-justify: auto;
     
 }

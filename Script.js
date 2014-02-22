@@ -10,19 +10,20 @@ function Timer(){
         min = minutes;
         sec = seconds;
 
-        $('#minutes').html(min).fadeIn();
+        $('#minutes').html(min + ":").fadeIn();
         $('#seconds').html(sec).fadeIn().fadeOut();
         sec = sec - 1;
 
 
         minuty = setInterval(function () {
             if (sec === 0 && min === 0) {
+                $('#seconds').html("0").fadeIn();
                 clearInterval(minuty);
             }
             else if (sec === 0) {
                 min = min - 1;
                 console.log("Minute is gone " + min);
-                $('#minutes').html(min).fadeIn();
+                $('#minutes').html(min + ":").fadeIn();
                 $('#seconds').html("59").fadeIn().fadeOut();
                 sec = 58;
             } else {

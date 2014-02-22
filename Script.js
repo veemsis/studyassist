@@ -4,6 +4,9 @@ function Timer(){
     var sec;
     var minuty;
     var pausedSec, pausedMin;
+    this.returnPaused = function () {
+        console.log(isPaused);
+    }
 
 
     this.start = function (minutes, seconds) {
@@ -55,6 +58,9 @@ function Timer(){
 
              
 }
+var pauseClicked = function () {
+    console.log("Pause button is clicked");
+}
 
 
 
@@ -62,11 +68,12 @@ function Timer(){
 var Watch = new Timer();
 
 $(document).ready(function () {
-    $('#start').click(function () {
+    $( "button, input[id='bstart']" ).click(function () {
 
-        Watch.start(0,5);
+        Watch.start(2,5);
     });
-    $('#pause').click(function () {
+    
+    $( "button, input[id='bpause']" ).click(function () {
         Watch.pause();
     });
 

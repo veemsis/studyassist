@@ -1,11 +1,17 @@
 function Timer(){
+    var isPaused = false;
+    var min;
+    var sec;
+    var minuty;
+    var pausedSec, pausedMin;
     
-
-    this.start = function (minutes) {
-        var min = minutes;
-        var sec = 0;
+    
+    this.start = function (minutes, seconds) {
+        min = minutes;
+        sec = seconds;
         
-           var minuty = setInterval(function () {
+        
+            minuty = setInterval(function () {
                 if(sec === 0 && min ===0){
                     clearInterval(minuty);
                 }
@@ -22,6 +28,26 @@ function Timer(){
                 
             }, 1000);     
              };
+
+             this.pause = function () {
+                 if (isPaused == false) {
+                     isPaused = true;
+                     console.log('Pause - sec = ' + sec);
+                     var pausedSec = sec;
+                     var pausedMin = min;
+                     clearInterval(minuty);
+                     console.log('pauseSec = ' + pausedSec);
+
+                 } else {
+                     isPaused = false;
+                     this.start(pausedMin, pausedSec);
+
+                 }
+
+
+             };
+
+             
 }
 
 
@@ -30,8 +56,13 @@ function Timer(){
 var Watch = new Timer();
 
 $(document).ready(function () {
-    
-    Watch.start(1);
+    $('#start').click(function () {
+
+        Watch.start(2,0);
+    });
+    $('#pause').click(function () {
+        Watch.pause();
+    });
 
 });
 

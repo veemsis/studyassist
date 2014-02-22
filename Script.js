@@ -68,12 +68,12 @@ var pauseClicked = function () {
 var Watch = new Timer();
 
 $(document).ready(function () {
-    $( "button, input[id='bstart']" ).click(function () {
+    $( "#bstart" ).click(function () {
 
         Watch.start(2,5);
     });
     
-    $( "button, input[id='bpause']" ).click(function () {
+    $( "#bpause" ).click(function () {
         Watch.pause();
     });
 
